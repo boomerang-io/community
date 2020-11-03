@@ -1,7 +1,7 @@
 ---
 name: "\U0001F4AC Support or Inquiry Request"
 about: Request for Support
-title: ''
+title: Ask me anything
 labels: help wanted
 assignees: ''
 

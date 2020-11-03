@@ -1,7 +1,7 @@
 ---
 name: "\U0001F680  Epic"
 about: A theme of work that is required to complete the larger goal
-title: "[Epic]"
+title: I feel the need — the need for speed.
 labels: Epic
 assignees: ''
 

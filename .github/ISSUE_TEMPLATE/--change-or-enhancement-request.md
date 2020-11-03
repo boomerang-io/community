@@ -1,7 +1,7 @@
 ---
 name: "✨ Change or Enhancement Request"
 about: Suggest a change or enhancement for this project
-title: ''
+title: This will improve things by 400%. Guaranteed.
 labels: enhancement
 assignees: ''
 

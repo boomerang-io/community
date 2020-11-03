@@ -1,7 +1,7 @@
 ---
 name: "\U0001F41B Bug Report"
 about: Create a report to help us improve if something isn't working as expected.
-title: "[Bug] Oops looks like there is an issue"
+title: Oops looks like there is an issue
 labels: bug
 assignees: ''
 
