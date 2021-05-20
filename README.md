@@ -17,6 +17,9 @@ The following documentation will help guide us all as we strive to create a comm
 
 - [Maintainers](https://github.com/boomerang-io/roadmap/blob/main/MAINTAINERS.md)
 - [Code of Conduct](https://github.com/boomerang-io/roadmap/blob/main/CODE_OF_CONDUCT.md)
+- Monthly meetings every second Tuesday of the month at 5:00pm Central Timezone
+  - Meeting Notes (tba) 
+  - Calendar Invite (tba)
 
 ## Want to get involved?
 
