@@ -20,7 +20,7 @@ The following documentation will help guide us all as we strive to create a comm
 
 ## Want to get involved?
 
-We welcome all contributions to the project and you can reach out to us via [slack](https://join.slack.com/t/boomerang-io/shared_invite/zt-pxo2yw2o-c3~6YvWkKNrKIwhIBAKhaw) or thorugh GitHub.
+We welcome all contributions to the project and you can reach out to us via [slack](https://join.slack.com/t/boomerang-io/shared_invite/zt-pxo2yw2o-c3~6YvWkKNrKIwhIBAKhaw) or through GitHub.
 
 ### How to Contribute
 Like any good development project, we use Pull Requests (PRs) to track code changes. We recommend that if you want to contrubute and implement a fix, change, or enhancement, you do so by linking the PR with an Issue.
