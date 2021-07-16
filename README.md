@@ -27,6 +27,11 @@ A community meeting will be held every two weeks on Tuesday at 3:00pm US Central
 
 > To get access to this meeting and the agenda, please [join the Boomerang IO google group](https://groups.google.com/g/boomerang-io)
 
+## Documentation & Presentation
+
+- [Docs](https://www.useboomerang.io/docs/boomerang-flow/introduction/overview)
+- [Presentation](https://docs.google.com/presentation/d/1id1qePshOm3YRbLay47Ny6WvkrbxIOHEJtVXsM8PmGI/edit?usp=sharing) 
+
 ## Want to get involved?
 
 We welcome all contributions to the project and you can reach out to us via [slack](https://join.slack.com/t/boomerang-io/shared_invite/zt-pxo2yw2o-c3~6YvWkKNrKIwhIBAKhaw) or through GitHub.
