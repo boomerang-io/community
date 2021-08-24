@@ -1,4 +1,4 @@
-# Welcome to the Boomerang community 
+# :wave: Welcome to the Boomerang community 
 
 The Boomerang community, roadmap, and planning repository. This is where you can find information on joining, contributing, governance, releases and roadmap.
 
