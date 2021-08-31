@@ -21,16 +21,17 @@ The following documentation will help guide us all as we strive to create a comm
 ### Community Meeting
 
 A community meeting will be held every two weeks on Tuesday at 3:00pm US Central Timezone
-  - Google Meet: https://meet.google.com/thh-dpwr-ynv
-  - [Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=NHNzZmVpaDRxdGh0MTM5MjQ1aGUzdDhoY3ZfMjAyMTA3MTNUMjAwMDAwWiB0eXNvbkBsYXdyaWUuY29tLmF1&tmsrc=tyson%40lawrie.com.au&scp=ALL)
-  - Agenda: https://docs.google.com/document/d/1298K1t36f5jl9VwEipp3KHgmdj-vRHHA5YlnMaS2n0A/edit?usp=sharing
+  - [Agenda](https://docs.google.com/document/d/1298K1t36f5jl9VwEipp3KHgmdj-vRHHA5YlnMaS2n0A/edit?usp=sharing)
+  - [Google Meet](https://meet.google.com/thh-dpwr-ynv)
+  - [Add to Calendar](https://calendar.google.com/event?action=TEMPLATE&tmeid=NHNzZmVpaDRxdGh0MTM5MjQ1aGUzdDhoY3ZfMjAyMTA3MTNUMjAwMDAwWiB0eXNvbkBsYXdyaWUuY29tLmF1&tmsrc=tyson%40lawrie.com.au&scp=ALL)
 
 > To get access to this meeting and the agenda, please [join the Boomerang IO google group](https://groups.google.com/g/boomerang-io)
 
 ## Documentation & Presentation
 
 - [Docs](https://www.useboomerang.io/docs/boomerang-flow/introduction/overview)
-- [Presentation](https://docs.google.com/presentation/d/1id1qePshOm3YRbLay47Ny6WvkrbxIOHEJtVXsM8PmGI/edit?usp=sharing) 
+- [Presentation](https://docs.google.com/presentation/d/1id1qePshOm3YRbLay47Ny6WvkrbxIOHEJtVXsM8PmGI/edit?usp=sharing)
+- [YouTube](https://youtu.be/erBEQdBHFJU)
 
 ## Want to get involved?
 
