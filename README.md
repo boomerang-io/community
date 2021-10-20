@@ -6,10 +6,10 @@ Boomerang is a collection of open source, cloud-native projects for CI/CD and au
 
 ## Planning and Roadmap
 
-We use ZenHub for our release management, if you want to take a look at the active release or the roadmap:
+We use [GitHub Issues Projects](https://github.com/features/issues) _beta_ for our release management, if you want to take a look at the active release or the roadmap:
 
-- Boomerang Flow [board](https://app.zenhub.com/workspaces/boomerang-flow-5f9600754a5aa9001521ccc1/board)
-- Boomerang Bosun [board](https://app.zenhub.com/workspaces/boomerang-bosun-602a057c1eebd00012f95262/board?repos=306764578,217731715,209161540,221570387,221567477,218297596)
+- [Boomerang Flow GitHub Issues Project](https://github.com/orgs/boomerang-io/projects/4/views/1)
+- Boomerang Bosun _tba_
 
 ## Governance
 
