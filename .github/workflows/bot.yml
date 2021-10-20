@@ -1,0 +1,25 @@
+name: Bot
+on:
+  issues:
+    types: [ opened ]
+jobs:
+  # This workflow contains a single job called "build"
+  bot:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Boomerang Flow Run Workflow
+      uses: boomerang-io/flow.action@v0.5.2
+      with:
+        # The Boomerang Flow event URL and context
+        url: ${{ secrets.FLOWABL_URL }}
+        # The security token as part of your workflow
+        token: ${{ secrets.FLOWABL_TOKEN }}
+        # The ID of the workflow you wish to execute
+        workflowId: ${{ secrets.FLOWABL_WORKFLOW_ID }}
+        # The custom topic entered into your worlflow configuration
+        topic: NewIssue
+        # The JSON payload to send with the event
+        payload: ${{ github.event }}
