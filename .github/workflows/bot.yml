@@ -22,4 +22,4 @@ jobs:
         # The custom topic entered into your worlflow configuration
         topic: NewIssue
         # The JSON payload to send with the event
-        payload: ${{ github.event }}
+        payload: ${{ toJson(github.event) }}
