@@ -1,4 +1,4 @@
-name: Bot
+name: Issue Bot
 on:
   issues:
     types: [ opened ]
@@ -11,7 +11,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Boomerang Flow Run Workflow
-      uses: boomerang-io/flow.action@v0.6.1
+      uses: boomerang-io/flow.action@v0.6.2
       with:
         # The Boomerang Flow event URL and context
         url: ${{ secrets.FLOWABL_URL }}
