@@ -11,7 +11,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Boomerang Flow Run Workflow
-      uses: boomerang-io/flow.action@v0.5.2
+      uses: boomerang-io/flow.action@v0.6.0
       with:
         # The Boomerang Flow event URL and context
         url: ${{ secrets.FLOWABL_URL }}
