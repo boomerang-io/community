@@ -19,6 +19,8 @@ body:
        - Boomerang Flow
        - Boomerang Bosun
        - Other
+   validations:
+     required: true
  - type: textarea
    id: steps
    attributes:
