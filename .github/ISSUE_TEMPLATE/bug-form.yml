@@ -4,6 +4,11 @@ title: Oops looks like there is an issue
 labels: 
  - bug
 body:
+ - type: markdown
+   attributes:
+     value: |
+       Thanks for taking the time to fill out this bug report!
+       
  - type: textarea
    id: description
    attributes:
@@ -43,9 +48,5 @@ body:
    attributes:
      label: Additional Contenxt
      description: Add any other context about the problem here.
- - type: markdown
-   attributes:
-     value: |
-       Thanks for taking the time to fill out this bug report!
-       
+     placeholder: |
        If applicable, add screenshots or files to help explain your problem.
