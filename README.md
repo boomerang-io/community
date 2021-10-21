@@ -9,7 +9,7 @@ Boomerang is a collection of open source, cloud-native projects for CI/CD and au
 We use [GitHub Issues Projects](https://github.com/features/issues) _beta_ for our release management, if you want to take a look at the active release or the roadmap:
 
 - [Boomerang Flow GitHub Issues Project](https://github.com/orgs/boomerang-io/projects/4/views/1)
-- Boomerang Bosun _tba_
+- [Boomerang Bosun GitHub Issues Project](https://github.com/orgs/boomerang-io/projects/5)
 
 ## Governance
 
