@@ -3,8 +3,6 @@ description: Create a report to help us improve if something isn't working as ex
 title: Oops looks like there is an issue
 labels: 
  - bug
-assignees:
- - tlawrie
 body:
  - type: textarea
    id: description
@@ -13,6 +11,14 @@ body:
      description: A clear and concise description of what the bug is and what you expected to happen.
    validations:
      required: true
+  - type: dropdown
+    id: project
+    attributes:
+      label: What project does this issue relate to?
+      options:
+        - Boomerang Flow
+        - Boomerang Bosun
+        - Other
  - type: textarea
    id: steps
    attributes:
