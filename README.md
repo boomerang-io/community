@@ -4,7 +4,22 @@ The Boomerang community, roadmap, and planning repository. This is where you can
 
 Boomerang is a collection of open source, cloud-native projects for CI/CD and automation. You can find more [here](https://useboomerang.io)
 
-## Planning and Roadmap
+## Roadmap
+
+The following are our high level roadmap items that we are aiming for in 2022, see [planning](#planning) for the detailed release / iteration breakdown.
+
+| Goal | Description |
+| --- | --- |
+| Enhanced Architecture | A new architecture based on lessons learnt. The Eventing / Webhook Listener service will be merged into the API service which in turn will be split out from the Workflow service. The Workflow service will focus on being the backend to the front end and performing CRUD operations. The executor engine will be split from the Workflow service and merged with the Controller service. See [enhancement request](https://github.com/boomerang-io/roadmap/issues/201) for more information.
+| API Driven | Expand the APIs to cover all endpoints and drive powerful integrations. Every action should be able to be done through the API. |
+| Non blocking execution | Utilize NATS queues for non blocking task execution to do a better balanced job of handling high load. |
+| Seperation of execution concern | Add an installation option where a namespace per team can be used for separation as well as node labels for running team tasks on different kubernetes nodes. |
+| Looping | As Tekton finalizes looping support, add the capability to Flow via the drag and drop UI |
+| Greater Activity detail | Activity is only recorded once you get to execution of the workflow. Add in greater visibility to workflow errors even prior to execution. |
+| Labels | Greater support for labels through the UI and ability to search on labels. |
+| Enhanced Triggering | New user experience for creating triggers, including the ability to enable through button click integration for popular integrations |
+
+## Planning
 
 We use [GitHub Issues Projects](https://github.com/features/issues) _beta_ for our release management, if you want to take a look at the active release or the roadmap:
 
