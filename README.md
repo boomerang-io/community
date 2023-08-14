@@ -27,7 +27,7 @@ The following documentation will help guide us all as we strive to create a comm
 
 ### Community Meeting
 
-A community meeting will be held every two weeks on Tuesday at 3:00pm US Central Timezone
+A community meeting will be held every two weeks on Tuesday at 3:30pm US Central Timezone for 30 minutes.
 
 - [Agenda](https://docs.google.com/document/d/1298K1t36f5jl9VwEipp3KHgmdj-vRHHA5YlnMaS2n0A/edit?usp=sharing)
 - [Google Meet](https://meet.google.com/thh-dpwr-ynv)
