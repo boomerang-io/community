@@ -1,8 +1,8 @@
 # :wave: Welcome to the Boomerang community
 
-Boomerang is a collection of open source, cloud-native projects for CI/CD and automation. You can find more [here](https://useboomerang.io)
+Boomerang is a collection of open source, cloud-native projects for CI/CD and automation. You can learn more [here](https://useboomerang.io)
 
-This is the Boomerang community, roadmap, planning, and architecture repository. Where you can find information on:
+This is the community, roadmap, planning, and architecture repository. Where you can find information on:
 
 - joining and contributing to the community
 - governance
