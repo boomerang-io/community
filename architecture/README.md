@@ -32,7 +32,7 @@ Document the intent and implementation for certain features, and allow for effec
 
 ### [Diagrams](./flow/architecture.drawio)
 
-Draw.io architecture diagrams that are embedded in the public documentation. 
+Draw.io architecture diagrams that are embedded in the public documentation.
 
 ## Boomerang Bosun Architecture
 
