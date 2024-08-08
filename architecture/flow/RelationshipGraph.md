@@ -4,19 +4,26 @@ As we change to a more distributed object model, the idea of a direct relationsh
 
 ## Model 1
 
-In the first iteration we planned on adding a relationship mapping to the various layers of the system i.e. User, Team, System, Global, etc.
+In the first iteration we implemented a model where every object got a relationship to the User, Team, Workflow, or whatever parent.
+
+The problem we faced was that the model didn't handle slugs (which weren't present in the solution when we built this model) and it meant that an objects ID may be in many documents which causes an update issue. Making updates was hard.
 
 ```json
-"relationships" : [{
-        "type": "workflow",
-        "relationship":"owner",
-        "id": "12345"
-    }],
+{
+    "_id" : "<generated>",
+    "fromType" : "TEAM",
+    "fromRef" : "66b00d0fcee32a300dc0a3ee",
+    "label" : "OWNER",
+    "toType" : "ORGANISATION",
+    "toRef" : "66b00d0fcee32a300dc0a3ee",
+}
 ```
 
 ## Model 2
 
-As we expanded on this concept and looked into Gremlin / Mongo graph relationships using vertex and edge
+As we expanded on this concept and looked into Gremlin / Mongo graph relationships using vertex and edge.
+
+Problem was constantly going across collections to get the nodes and the edges creating an expensive query problem.
 
 ### Vertex (Node)
 
@@ -63,9 +70,50 @@ Data structure for edge:
 }
 ```
 
+## Model 3
+
+With this model, the object holds the connections (or edges) from itself to another object. I.e. WorkflowRun has a relationship to a TEAM and the to of the connection is to the other relationship object. 
+
+The `data` object holds additional information such as Display Name or other fields so as not have to do another full MongoDB query.
+
+The benefit of this model are;
+- keeping the ID between the relationship nodes rather than to the objects which may change.
+- If you delete the node, the relationships are automatically removed
+
+```json
+{
+    "_id" : "<generated>",
+    "type" : "TEAM",
+    "ref" : "66b00d0fcee32a300dc0a3ee",
+    "slug" : "scorecard",
+    "data" : {},
+    "connections" : [
+    {
+        "label" : "BELONGSTO",
+        "to" : ObjectId("66062121178f8a388abaef53"),
+        "data" : {}
+    }
+    ],
+}
+```
+
+## Model 4
+
+Along the way we have introduced new concepts (like slugs) and learnt what we are trying to achieve with the Relationship model when storing it in a document based database.
+
+**Aim:**
+- Allow for lookup by slug (end user requests come with slug not ID)
+- Remove propogation of IDs (find a way to not have the same ID everywhere within the relationship collection)
+- No embedding relationships using 'connections', use an aggregate call to retrieve
+- Don't go across collections
+
+No solution as of yet
+
+
 ## Reference
 
 - [Getting Started with Graph Databases: Azure CosmosDB with Gremlin API](https://itnext.io/getting-started-with-graph-databases-azure-cosmosdb-with-gremlin-api-and-python-80e57cbd1c5e)
 - [MongoDB Graph Database](https://www.mongodb.com/databases/mongodb-graph-database)
 - [MongoDB graphLookup](https://www.mongodb.com/docs/v4.4/reference/operator/aggregation/graphLookup/)
 - [Spring Data Gremlin](https://github.com/gjrwebber/spring-data-gremlin)
+- [OSOHQ ReBAC](https://www.osohq.com/academy/relationship-based-access-control-rebac)
