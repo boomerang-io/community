@@ -103,12 +103,21 @@ Along the way we have introduced new concepts (like slugs) and learnt what we ar
 
 **Aim:**
 - Allow for lookup by slug (end user requests come with slug not ID)
+  - This is essentially an $or in MongoDB
 - Remove propogation of IDs (find a way to not have the same ID everywhere within the relationship collection)
 - No embedding relationships using 'connections', use an aggregate call to retrieve
-- Don't go across collections
+- Limit going across collections, as much as possible.
 
-No solution as of yet
+**Solution**
+In coming up with the solution, I went back to checking OSO, SpiceDB (AuthZed), Gremlin, Microsoft, etc, and also ran multiple scenarios through GitHub Copilot for reference material and comparing the pros and cons.
 
+The summary is, that we should use the Nodes (Vertices), and Edges storage of relationships in MongoDB, however the constant read is a concern with the MongoDB Graph Aggregate across connections. I don't have exact reference material on the cost, but I expect if we did a view inside CosmosDB or Atlas, the costs would add up.
+
+The answer to this, is to generate an in memory Relationship Graph using JGraphT (which we already using inside the Engine for the DAG), although this time we use the BFSShortestPath as an unweighted way of determining the path between nodes.
+
+This also solves the issue where we kept having to do Graph Aggregates to get multiple layers of the graph, for example from User -> Team / Workspace -> Component. By generating a graph we can determine if there is a path from User -> Component.
+
+The in memory implementation, does mean that we need to rebuild the graph every time there is an update to the nodes or edges. However considering the majority is checking relationships and not creating / updating / deleting, this caches the reads as much as possible. We do not a lock collection, or event, to be created where by we can say 'rebuild the graph' as an external prompt to ensure scaling of service's doesn't break the graph.
 
 ## Reference
 
@@ -117,3 +126,4 @@ No solution as of yet
 - [MongoDB graphLookup](https://www.mongodb.com/docs/v4.4/reference/operator/aggregation/graphLookup/)
 - [Spring Data Gremlin](https://github.com/gjrwebber/spring-data-gremlin)
 - [OSOHQ ReBAC](https://www.osohq.com/academy/relationship-based-access-control-rebac)
+- [AuthZed Permissions System]https://authzed.com/blog/permissions-systems-building-an-authorization-lexicon
