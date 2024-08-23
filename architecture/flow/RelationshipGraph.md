@@ -101,14 +101,16 @@ The benefit of this model are;
 
 Along the way we have introduced new concepts (like slugs) and learnt what we are trying to achieve with the Relationship model when storing it in a document based database.
 
-**Aim:**
+### Aim
+
 - Allow for lookup by slug (end user requests come with slug not ID)
   - This is essentially an $or in MongoDB
 - Remove propogation of IDs (find a way to not have the same ID everywhere within the relationship collection)
 - No embedding relationships using 'connections', use an aggregate call to retrieve
 - Limit going across collections, as much as possible.
 
-**Solution**
+### Solution
+
 In coming up with the solution, I went back to checking OSO, SpiceDB (AuthZed), Gremlin, Microsoft, etc, and also ran multiple scenarios through GitHub Copilot for reference material and comparing the pros and cons.
 
 The summary is, that we should use the Nodes (Vertices), and Edges storage of relationships in MongoDB, however the constant read is a concern with the MongoDB Graph Aggregate across connections. I don't have exact reference material on the cost, but I expect if we did a view inside CosmosDB or Atlas, the costs would add up.
@@ -118,6 +120,38 @@ The answer to this, is to generate an in memory Relationship Graph using JGraphT
 This also solves the issue where we kept having to do Graph Aggregates to get multiple layers of the graph, for example from User -> Team / Workspace -> Component. By generating a graph we can determine if there is a path from User -> Component.
 
 The in memory implementation, does mean that we need to rebuild the graph every time there is an update to the nodes or edges. However considering the majority is checking relationships and not creating / updating / deleting, this caches the reads as much as possible. We do not a lock collection, or event, to be created where by we can say 'rebuild the graph' as an external prompt to ensure scaling of service's doesn't break the graph.
+
+### Adjustments
+
+Potential adjustment would be to remove the data attribute and rely on label to determine the linkage. However, it means if new roles are created, a new label would have to be created. Might be able to have it as ownerOf, editorOf, viewOf, etc and do a `*Of` as the match.
+
+### Documents
+
+Node
+```json
+{
+    "_id" : "user:66c5b0a1703c1e28aea58c0a",
+    "creationDate" : ISODate("2024-08-21T09:17:21.307Z"),
+    "type" : "user",
+    "ref" : "66c5b0a1703c1e28aea58c0a",
+    "slug" : "test@test.com.au",
+    "data" : {}
+}
+```
+
+Edge
+```json
+{
+    "_id" : ObjectId("66c419cbc8737a17e2bc54a7"),
+    "creationDate" : ISODate("2024-08-20T04:21:31.422Z"),
+    "from" : "user:66bbe41cf62a3a642faee42e",
+    "label" : "memberOf",
+    "to" : "workspace:66c419cbc8737a17e2bc54a6",
+    "data" : {
+        "role" : "owner"
+    }
+}
+```
 
 ## Reference
 
