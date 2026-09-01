@@ -1,3 +1,35 @@
+<div align="center">
+
+# 📦 This repository is archived
+
+**Boomerang Flow now lives in one place: [boomerang-io/flow](https://github.com/boomerang-io/flow)**
+
+[![Open an issue](https://img.shields.io/badge/Bugs%20%26%20features-boomerang--io%2Fflow-1d76db?style=for-the-badge&logo=github)](https://github.com/boomerang-io/flow/issues/new/choose)
+[![Slack](https://img.shields.io/badge/Questions-Boomerang%20Slack-4A154B?style=for-the-badge&logo=slack)](https://join.slack.com/t/boomerang-io/shared_invite/zt-pxo2yw2o-c3~6YvWkKNrKIwhIBAKhaw)
+[![Docs](https://img.shields.io/badge/Docs-useboomerang.io-0e8a16?style=for-the-badge)](https://www.useboomerang.io/docs)
+
+</div>
+
+> [!IMPORTANT]
+> **Archived on 2026-09-01.** This was the central issue tracker and governance repo while Boomerang was split
+> across ~30 repositories. Boomerang Flow is now a monorepo, so everything here has a new home:
+>
+> | Was here | Now lives at |
+> | --- | --- |
+> | Issues (bugs, features) | [boomerang-io/flow/issues](https://github.com/boomerang-io/flow/issues) — the 143 open issues were triaged on 2026-09-01; transferred ones redirect from their old URL, closed ones carry a comment saying why |
+> | Contributing, support, security, maintainers, code of conduct | [boomerang-io/flow](https://github.com/boomerang-io/flow#community-and-contributing) (canonical) and [boomerang-io/.github](https://github.com/boomerang-io/.github) (org defaults) |
+> | Architecture decisions, data-migration maps, benchmarks | merged into [`flow/specifications/`](https://github.com/boomerang-io/flow/tree/main/specifications) |
+> | Roadmap | [`flow/ROADMAP.md`](https://github.com/boomerang-io/flow/blob/main/ROADMAP.md) and the [project board](https://github.com/orgs/boomerang-io/projects/4/views/1) |
+> | Bosun issues | `bosun.client.web` / `bosun.service.policy` |
+>
+> Everything below is kept read-only for reference. Nothing was deleted.
+
+---
+
+<details>
+<summary>Original README (historical)</summary>
+
+
 # :wave: Welcome to the Boomerang community
 
 Boomerang is a collection of open source, cloud-native projects for CI/CD and automation. You can learn more [here](https://useboomerang.io)
@@ -66,3 +98,5 @@ There are 5 types of issues that we have added to the issue templates. Epic and 
 ### Commit Messages
 
 The commit message should state the change in 72 characters or less. Additionally we recommend, and require in some repositories, the usage of a commit lint and conventional commit so that we can map these to Release Notes.
+
+</details>
